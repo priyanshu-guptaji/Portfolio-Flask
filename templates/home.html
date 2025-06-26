@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="home" class="hero">
+    <div class="floating-element">💫</div>
+    <div class="floating-element">✨</div>
+    <div class="floating-element">🚀</div>
+    <div class="hero-content">
+        <h1>Hi, I'm {{ name | default('Priyanshu Gupta') }}</h1>
+        <p>{{ title | default('Full Stack Developer & Designer') }}</p>
+        <a href="{{ url_for('projects') }}" class="cta-button">View My Work</a>
+    </div>
+</section>
+{% endblock %}
