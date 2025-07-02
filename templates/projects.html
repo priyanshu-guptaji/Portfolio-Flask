@@ -5,28 +5,29 @@
         <h2 class="section-title fade-in">Featured Projects</h2>
         <div class="projects-grid fade-in">
             {% for project in projects | default([
-                {
-                    'name': 'E-Commerce Platform',
-                    'description': 'A full-featured e-commerce website with user authentication, payment integration, and admin dashboard.',
-                    'tech': ['React', 'Node.js', 'MongoDB', 'Stripe'],
-                    'demo': '#',
-                    'github': '#'
-                },
-                {
-                    'name': 'Task Management App',
-                    'description': 'A collaborative task management application with real-time updates and team collaboration features.',
-                    'tech': ['Vue.js', 'Express', 'Socket.io', 'PostgreSQL'],
-                    'demo': '#',
-                    'github': '#'
-                },
-                {
-                    'name': 'Weather Dashboard',
-                    'description': 'A responsive weather dashboard with location-based forecasts and interactive charts.',
-                    'tech': ['JavaScript', 'Chart.js', 'Weather API', 'CSS3'],
-                    'demo': '#',
-                    'github': '#'
-                }
-            ]) %}
+    {
+        'name': 'Swayamvaar',
+        'description': 'A wedding platform built with the MERN stack, allowing customers and wedding planners to connect, explore venues across India, and manage wedding events.',
+        'tech': ['MongoDB', 'Express', 'React', 'Node.js'],
+        'demo': 'https://swayamvaar-demo-link.com',
+        'github': 'https://github.com/priyanshu-guptaji/Swayamvaar'
+    },
+    {
+        'name': 'macOS-style Portfolio',
+        'description': 'A personal developer portfolio inspired by macOS UI, complete with animations, a boot-up experience, and interactive windowed components.',
+        'tech': ['React', 'TailwindCSS', 'Framer Motion'],
+        'demo': 'https://portfolio-demo-link.com',
+        'github': 'https://github.com/priyanshu-guptaji/macOS-portfolio'
+    },
+    {
+        'name': 'Dev Diary (Blog Website)',
+        'description': 'A full-stack blog website where users can sign up, post, edit, and delete blog entries. Includes search and like features.',
+        'tech': ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+        'demo': 'https://devdiary-demo-link.com',
+        'github': 'https://github.com/priyanshu-guptaji/Dev-Diary'
+    }
+]) %}
+
             <div class="project-card">
                 <div class="project-image">{{ project.name[:2] }}</div>
                 <div class="project-content">

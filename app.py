@@ -1,7 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for, flash
 from datetime import datetime
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your-very-secret-key'
+
 
 @app.route('/')
 def home():
@@ -15,8 +17,15 @@ def about():
 def projects():
     return render_template("projects.html", title="Projects")
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        subject = request.form.get('subject')
+        message = request.form.get('message')
+        flash('Thank you for reaching out! I will get back to you soon.')
+        return redirect(url_for('contact'))
     return render_template("contact.html", title="Contact")
 
 if __name__ == "__main__":
