@@ -5,31 +5,37 @@
         <h2 class="section-title fade-in">Featured Projects</h2>
         <div class="projects-grid fade-in">
             {% for project in projects | default([
-    {
-        'name': 'Swayamvaar',
-        'description': 'A wedding platform built with the MERN stack, allowing customers and wedding planners to connect, explore venues across India, and manage wedding events.',
-        'tech': ['MongoDB', 'Express', 'React', 'Node.js'],
-        'demo': 'https://swayamvaar-demo-link.com',
-        'github': 'https://github.com/priyanshu-guptaji/Swayamvaar'
-    },
-    {
-        'name': 'macOS-style Portfolio',
-        'description': 'A personal developer portfolio inspired by macOS UI, complete with animations, a boot-up experience, and interactive windowed components.',
-        'tech': ['React', 'TailwindCSS', 'Framer Motion'],
-        'demo': 'https://portfolio-demo-link.com',
-        'github': 'https://github.com/priyanshu-guptaji/macOS-portfolio'
-    },
-    {
-        'name': 'Dev Diary (Blog Website)',
-        'description': 'A full-stack blog website where users can sign up, post, edit, and delete blog entries. Includes search and like features.',
-        'tech': ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-        'demo': 'https://devdiary-demo-link.com',
-        'github': 'https://github.com/priyanshu-guptaji/Dev-Diary'
-    }
-]) %}
+                {
+    'name': 'Swayamvaar',
+    'description': 'A wedding platform built with the MERN stack...',
+    'tech': ['MongoDB', 'Express', 'React', 'Node.js'],
+    'demo': 'https://swayamvaar-demo-link.com',
+    'github': 'https://github.com/priyanshu-guptaji/Swayamvar',
+    'image': '/static/swayamvaar.png'
+},
+
+                {
+                    'name': 'macOS-style Portfolio',
+                    'description': 'A personal developer portfolio inspired by macOS UI...',
+                    'tech': ['React', 'TailwindCSS', 'Framer Motion'],
+                    'demo': 'https://priyanshuguptaportfolio.vercel.app/',
+                    'github': 'https://github.com/priyanshu-guptaji/macOS-portfolio',
+                    'image': '/static/mac-os.png'
+                },
+                {
+                    'name': 'Dev Diary (Blog Website)',
+                    'description': 'A full-stack blog website...',
+                    'tech': ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+                    'demo': 'https://devsdiary.vercel.app/',
+                    'github': 'https://github.com/priyanshu-guptaji/Dev-Diary',
+                    'image': '/static/image.png'
+                }
+            ]) %}
 
             <div class="project-card">
-                <div class="project-image">{{ project.name[:2] }}</div>
+                <div class="project-image">
+                    <img src="{{ project.image }}" alt="{{ project.name }} image">
+                </div>
                 <div class="project-content">
                     <h4>{{ project.name }}</h4>
                     <p>{{ project.description }}</p>
@@ -39,11 +45,12 @@
                         {% endfor %}
                     </div>
                     <div class="project-links">
-                        <a href="{{ project.demo }}" class="project-link primary">Live Demo</a>
-                        <a href="{{ project.github }}" class="project-link secondary">GitHub</a>
+                        <a href="{{ project.demo }}" class="project-link primary" target="_blank">Live Demo</a>
+                        <a href="{{ project.github }}" class="project-link secondary" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>
+
             {% endfor %}
         </div>
     </div>

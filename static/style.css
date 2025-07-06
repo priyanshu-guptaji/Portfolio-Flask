@@ -571,6 +571,7 @@
             }
 
             .hero h1 {
+
                 font-size: 2.5rem;
             }
 
@@ -614,4 +615,65 @@
                 gap: 1rem;
             }
         }
+        .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.about-image img:hover {
+    transform: scale(1.03);
+}
+
+.about-text h3 {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+}
+
+.hero p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Better stacking and toggle nav fixes */
+.nav-links {
+    z-index: 999;
+}
+
+.menu-toggle {
+    z-index: 1001;
+}
+
+.nav-links.active {
+    transform: translateY(0);
+    z-index: 1000;
+}
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
         
